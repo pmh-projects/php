@@ -1,0 +1,198 @@
+
+Polecenie 1
+<?php
+$osoba["imie"] = "Pawel";
+$osoba["nazwisko"] = "Mach";
+$osoba["pesel"] = "87061500000";
+$osoba["email"] =
+"pawelmach@pm.me";
+echo "Imie i nazwisko: ".$osoba["imie"]," " .$osoba["nazwisko"],"\n";
+echo "Nr pesel: ".$osoba["pesel"]."\n","Adres email: ".$osoba["email"];
+?>
+#lub
+<?php
+$osoba["imie"] = "Pawel";
+$osoba["nazwisko"] = "Mach";
+$osoba["pesel"] = "87061500000";
+$osoba["email"] =
+"pawelmach@pm.me";
+$osoba_cala=implode("\n",$osoba);
+echo $osoba_cala;
+?>
+Polecenie 2
+<?php
+$a=1001;
+echo "Wartosci tab[1-1000]=1000-1:\n\n";
+for($b=1;$b<$a;$b++){
+$tab[$b]=$a-$b;
+echo "tab[".$b."] = ".$tab[$b]."\n";
+}
+echo "\n\n\nSORTOWANIE\n";
+
+echo "Wartosci tab[1-1000]=1-1000:\n\n";
+sort($tab);
+for($b=1;$b<$a;$b++){
+echo "tab[".$b."] = ".$tab[($b-1)]."\n";
+}
+?>
+Polecenie 3
+<?php
+$a=0;
+echo "Liczby parzyste:\n\n";
+for($b=2;$b<=1000;$b+=2){
+$a++;
+$tab[$a]=$b;
+echo "tab[$a] = ".$tab[$a]."\n";
+}
+echo "\n\nLiczby nieparzyste:\n\n";
+for($b=1;$b<=1000;$b+=2){
+$a++;
+$tab[$a]=$b;
+echo "tab[$a] = ".$tab[$a]."\n";
+}
+?>
+Polecenie 4
+<?php
+$a=0;
+//echo "Liczby parzyste:\n\n";
+for($b=200;$b<=800;$b+=2){
+$a++;
+$tab[$a]=$b;
+// echo "tab[$a] = ".$tab[$a]."\n";
+}
+//echo "\n\nLiczby nieparzyste:\n\n";
+for($b=201;$b<=800;$b+=2){
+
+$a++;
+$tab[$a]=$b;
+//echo "tab[$a] = ".$tab[$a]."\n";
+}
+$tab2=$tab;
+rsort($tab2);
+print_r($tab2);
+?>
+Polecenie 5
+<?php
+function pole_trojkata($x,$y){
+return 0.5*$x*$y;
+}
+$p1=10;
+$w1=20;
+$p2=13;
+$w2=30;
+$p3=210;
+$w3=20;
+$p4=23;
+$w4=214;
+$p5=1000;
+$w5=1;
+$p6=123;
+$w6=321;
+echo "Pole trojkata o podstawie $p1 i wysokości $w1 wynosi: " .pole_trojkata($p1,$w1)."\n";
+echo "Pole trojkata o podstawie $p2 i wysokości $w2 wynosi: " .pole_trojkata($p2,$w2)."\n";
+echo "Pole trojkata o podstawie $p3 i wysokości $w3 wynosi: " .pole_trojkata($p3,$w3)."\n";
+echo "Pole trojkata o podstawie $p4 i wysokości $w4 wynosi: " .pole_trojkata($p4,$w4)."\n";
+echo "Pole trojkata o podstawie $p5 i wysokości $w5 wynosi: " .pole_trojkata($p5,$w5)."\n";
+echo "Pole trojkata o podstawie $p6 i wysokości $w6 wynosi: " .pole_trojkata($p6,$w6)."\n";
+?>
+Polecenie 6
+<?php
+$a=120;
+do{
+if($a%8==0){
+
+echo $a. "\n";
+}
+$a++;
+}while($a<=968)
+?>
+Polecenie 7
+<?php
+$a=20;
+while($a<=955){
+if($a%13==0)
+{
+echo $a. "\n";
+}
+$a++;
+}
+?>
+Polecenie 8
+<?php
+$a = 15;
+$b = 87;
+$c = 6;
+$d=($b*$b)-(4*$a*$c);
+if($d==0){
+$delta="rowna_zero";
+}
+if($d>0){
+$delta="wieksza_od_zera";
+}
+if($d<0){
+$delta="mniejsza_od_zera";
+}
+switch($delta){
+case "rowna_zero":
+echo "delta rowna zero\n";
+$x0=-$b/(2*$a);
+echo "x0 = $x0\n";
+
+break;
+case "wieksza_od_zera":
+echo "delta=wieksza_od_zera\n";
+$x1=(-$b-sqrt($d))/(2*$a);
+$x2=(-$b+sqrt($d))/(2*$a);
+echo "x1 = $x1\n";
+echo "x2 = $x2\n";
+break;
+case "mniejsza_od_zera":
+echo "delta=mniejsza_od_zera\n";
+echo "Brak pierwiastkow";
+break;
+}
+?>
+Polecenie 9
+<?php
+$tab[1]=3.14123;
+$tab[2]=2.71111;
+$tab[3]=100.123212;
+$tab[4]=5.3453;
+$tab[5]=2.54312;
+$tab[6]=444.4432;
+$tab[7]=132.99123;
+$tab[8]=43.5313;
+for($a=1;$a<=8;$a++){
+$tab2[$a]=round($tab[$a]);
+}
+for($a=1;$a<=8;$a++){
+$tab3[$a]=floor($tab[$a]);
+}
+for($a=1;$a<=8;$a++){
+$tab4[$a]=ceil($tab[$a]);
+}
+for($a=1;$a<=8;$a++){
+$tab5[$a]=round($tab[$a],3);
+}
+for($a=1;$a<=8;$a++){
+$tab6[$a]=round($tab[$a],4);
+
+}
+echo "Tab wartości:\n\n";
+print_r($tab);
+echo "\nTab2\n";
+echo "Tab do najbliższych wartosci calkowitych:\n\n";
+print_r($tab2);
+echo "\nTab3\n";
+echo "Tab do dolu:\n\n";
+print_r($tab3);
+echo "\nTab4\n";
+echo "Tab do gory:\n\n";
+print_r($tab4);
+echo "\nTab5\n";
+echo "Tab do 3 miejsca po przecinku:\n\n";
+print_r($tab5);
+echo "\nTab6\n";
+echo "Tab do 4 miejsca po przecinku:\n\n";
+print_r($tab6);
+?>
