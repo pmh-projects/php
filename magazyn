@@ -1,0 +1,62 @@
+<?php
+
+class magazyn{
+    
+    public $liczba_og;
+    public $liczba_pom;
+    public $liczba_kab;
+    public $libczba_cyt;
+    
+    private $cena_hurt_og=4;
+    private $cena_hurt_pom=5;
+    private $cena_hurt_kab=2;
+    private $cena_hurt_cyt=8;
+    
+    public function cena($x){
+
+        switch($this->x=$x){
+        case "og":
+        return ($this->cena_hurt_og)*22/100+$this->cena_hurt_og;
+        break;
+        case "pom":
+        return ($this->cena_hurt_pom)*22/100+$this->cena_hurt_pom;
+        break;
+        case "kab":
+        return ($this->cena_hurt_kab)*22/100+$this->cena_hurt_kab;
+        break;
+        case "cyt":
+        return ($this->cena_hurt_cyt)*22/100+$this->cena_hurt_cyt;
+        break;
+        }
+    }
+    
+    public function wartoscwszystkich(){
+       return (($this->liczba_og)*(($this->cena_hurt_og)*22/100+($this->cena_hurt_og)))+
+       (($this->liczba_pom)*(($this->cena_hurt_pom)*22/100+($this->cena_hurt_pom)))+
+       (($this->liczba_kab)*(($this->cena_hurt_kab)*22/100+($this->cena_hurt_kab)))+
+       (($this->liczba_cyt)*(($this->cena_hurt_cyt)*22/100+($this->cena_hurt_cyt)));
+    }
+}
+
+$magazyn1 = new magazyn();
+$magazyn1->liczba_og=10;
+$magazyn1->liczba_pom=5;
+$magazyn1->liczba_kab=1;
+$magazyn1->liczba_cyt=2;
+
+
+echo "W magazynie jest:\n";
+echo "Ogorki: ".$magazyn1->liczba_og."\n";
+echo "Pom: ".$magazyn1->liczba_pom."\n";
+echo "Cyt: ".$magazyn1->liczba_cyt."\n";
+echo "Kab: ".$magazyn1->liczba_kab."\n\n";
+
+
+echo "Laczna wartosc wszystkich towarow: ".$magazyn1->wartoscwszystkich()." zl."."\n\n";
+
+echo "Cena brutto og: ".$magazyn1->cena("og")." zl.\n";
+echo "Cena brutto pom: ".$magazyn1->cena("pom")." zl.\n";
+echo "Cena brutto cyt: ".$magazyn1->cena("cyt")." zl.\n";
+echo "Cena brutto kab: ".$magazyn1->cena("kab")." zl.\n";
+
+?>
