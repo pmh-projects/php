@@ -1,0 +1,16 @@
+<?php
+$tab[0]="www.x7x2x6.wp.pl";
+$tab[1]="www.x3x47x6.interia.pl";
+$tab[2]="www.x7x285x6.logo.de";
+$tab[3]="www.x32781x3x6.vv.de";
+$tab[4]="www.x2x79x6.zip.ca";
+$tab[5]="www.x3x593x6.martis.ca";
+$tab[6]="www.x227x4x6.onet.pl";
+$tab[7]="www.x5x3x6.wp.pl";
+$tab[8]="www.xx1vdfx6.yahoo.de";
+for($i=0;$i<count($tab);$i++){
+preg_match_all('/[0-9]/', $tab[$i], $a);
+$c=implode("",($a[0]));
+echo "Napis $tab[$i] zawiera cyfry: " .$c."\n";
+}
+?>
