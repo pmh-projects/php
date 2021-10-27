@@ -76,24 +76,22 @@ Polecenie 5
 function pole_trojkata($x,$y){
 return 0.5*$x*$y;
 }
-$p1=10;
-$w1=20;
-$p2=13;
-$w2=30;
-$p3=210;
-$w3=20;
-$p4=23;
-$w4=214;
-$p5=1000;
-$w5=1;
-$p6=123;
-$w6=321;
-echo "Pole trojkata o podstawie $p1 i wysokości $w1 wynosi: " .pole_trojkata($p1,$w1)."\n";
-echo "Pole trojkata o podstawie $p2 i wysokości $w2 wynosi: " .pole_trojkata($p2,$w2)."\n";
-echo "Pole trojkata o podstawie $p3 i wysokości $w3 wynosi: " .pole_trojkata($p3,$w3)."\n";
-echo "Pole trojkata o podstawie $p4 i wysokości $w4 wynosi: " .pole_trojkata($p4,$w4)."\n";
-echo "Pole trojkata o podstawie $p5 i wysokości $w5 wynosi: " .pole_trojkata($p5,$w5)."\n";
-echo "Pole trojkata o podstawie $p6 i wysokości $w6 wynosi: " .pole_trojkata($p6,$w6)."\n";
+$p[1]=10;
+$w[1]=20;
+$p[2]=13;
+$w[2]=30;
+$p[3]=210;
+$w[3]=20;
+$p[4]=23;
+$w[4]=214;
+$p[5]=1000;
+$w[5]=1;
+$p[6]=123;
+$w[6]=321;
+
+for($i=1;$i<7;$i++){
+echo "Pole trojkata o podstawie $p[$i] i wysokości $w[$i] wynosi: " .pole_trojkata($p[$i],$w[$i])."\n";
+}
 ?>
 Polecenie 6
 <?php
